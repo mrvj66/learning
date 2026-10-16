@@ -1,0 +1,5 @@
+# служебные файлы macOS
+.DS_Store
+
+# собранные программы
+projects/go-hello/go-hello
