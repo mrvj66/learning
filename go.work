@@ -1,6 +1,7 @@
 go 1.27.2
 
 use (
+	./projects/cafe
 	./projects/calc
 	./projects/cards
 	./projects/go-hello
