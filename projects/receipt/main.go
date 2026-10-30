@@ -2,29 +2,26 @@ package main
 
 import "fmt"
 
+const deliveryFee = 99.0
+
 func main() {
 
-	coffe := "Кофе"
-	coffePrice := 249.90
-	coffeQuantity := 3
-	coffeCost := coffePrice * float64(coffeQuantity)
+	var name string
+	var price float64
+	var quantity int
 
-	curassan := "Курасан"
-	curassanPrice := 120.50
-	curassanQuantity := 2
-	curassanCost := curassanPrice * float64(curassanQuantity)
+	fmt.Print("Название товара: ")
+	fmt.Scan(&name)
+	fmt.Print("Цена: ")
+	fmt.Scan(&price)
+	fmt.Print("Количество товара: ")
+	fmt.Scan(&quantity)
 
-	water := "Вода"
-	waterPrice := 59.00
-	waterQuantity := 1
-	waterCost := waterPrice * float64(waterQuantity)
+	cost := price * float64(quantity)
+	total := cost + deliveryFee
 
-	fmt.Printf("%s: %d шт. * %.2f = %.2f руб\n", coffe, coffeQuantity, coffePrice, coffeCost)
-	fmt.Printf("%s: %d шт. * %.2f = %.2f руб\n", curassan, curassanQuantity, curassanPrice, curassanCost)
-	fmt.Printf("%s: %d шт. * %.2f = %.2f руб\n", water, waterQuantity, waterPrice, waterCost)
-
-	total := coffeCost + curassanCost + waterCost
+	fmt.Printf("%s: %d шт. * %.2f = %.2f руб\n", name, quantity, price, cost)
+	fmt.Printf("Доставка: %.2f руб.\n", deliveryFee)
 	fmt.Println("-----------------------")
 	fmt.Printf("Итог: %.2f руб.\n", total)
-
 }
