@@ -23,13 +23,14 @@ func main() {
 	fmt.Print("Выберите количество товара: ")
 	fmt.Scan(&quantity)
 
-	if choice == 1 {
+	switch choice {
+	case 1:
 		name = "Кофе"
 		price = coffePrice
-	} else if choice == 2 {
+	case 2:
 		name = "Курассан"
 		price = curassantPrice
-	} else if choice == 3 {
+	case 3:
 		name = "Вода"
 		price = waterPrice
 	}

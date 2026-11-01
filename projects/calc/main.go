@@ -16,26 +16,26 @@ func main() {
 	fmt.Print("Укажи второе число: ")
 	fmt.Scan(&b)
 
-	if op == "+" {
+	switch op {
+	case "+":
 		fmt.Printf("%d + %d = %d\n", a, b, a+b)
-	} else if op == "-" {
+	case "-":
 		fmt.Printf("%d - %d = %d\n", a, b, a-b)
-	} else if op == "*" {
+	case "*":
 		fmt.Printf("%d * %d = %d\n", a, b, a*b)
-	} else if op == "/" {
+	case "/":
 		if b == 0 {
-			fmt.Println("Нельзя делить на ноль")
+			fmt.Println("Деление на ноль невозможно")
 		} else {
 			fmt.Printf("%d / %d = %.2f\n", a, b, float64(a)/float64(b))
 		}
-	} else if op == "%" {
+	case "%":
 		if b == 0 {
-			fmt.Println("Деление на ноль нельзя")
+			fmt.Println("Деление на ноль невозможно")
 		} else {
 			fmt.Printf("%d %% %d = %d\n", a, b, a%b)
 		}
-	} else {
+	default:
 		fmt.Println("Неизвестное действие")
 	}
-
 }
