@@ -6,5 +6,6 @@ use (
 	./projects/cards
 	./projects/go-hello
 	./projects/receipt
+	./projects/sum
 	./projects/table
 )
