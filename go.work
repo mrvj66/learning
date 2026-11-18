@@ -5,6 +5,7 @@ use (
 	./projects/calc
 	./projects/cards
 	./projects/go-hello
+	./projects/practice
 	./projects/receipt
 	./projects/sum
 	./projects/table
